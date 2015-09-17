@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">내 어플리케이션</string>
+    <string name="action_settings">설정</string>
+    <string name="hello_world">안녕 세상!</string>
+    <string name="strBtn1">네이트 홈페이지 열기</string>
+    <string name="strBtn2">911 응급전화 걸기</string>
+    <string name="strBtn3">갤러리 열기</string>
+    <string name="strBtn4">끝내기</string>
+</resources>
