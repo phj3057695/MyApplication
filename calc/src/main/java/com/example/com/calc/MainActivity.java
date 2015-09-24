@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 num2 = edit2.getText().toString();
                 try {
                     result = Double.parseDouble(num1) + Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
+                    textResult.setText("계산 결과 : " + df.format(result).toString());
                 }
                 catch(NumberFormatException e){
                     Toast.makeText(getApplicationContext(),"숫자 입력란이 비어 있습니다.",Toast.LENGTH_LONG).show();
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                 num2 = edit2.getText().toString();
                 try {
                     result = Double.parseDouble(num1) - Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
+                    textResult.setText("계산 결과 : " + df.format(result).toString());
                 }
                 catch(NumberFormatException e){
                     Toast.makeText(getApplicationContext(),"숫자 입력란이 비어 있습니다.",Toast.LENGTH_LONG).show();
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     result = Double.parseDouble(num1) * Double.parseDouble(num2);
 
-                    textResult.setText("계산 결과 : " + result.toString());
+                    textResult.setText("계산 결과 : " + df.format(result).toString());
                 }
                 catch(NumberFormatException e){
                     Toast.makeText(getApplicationContext(),"숫자 입력란이 비어 있습니다.",Toast.LENGTH_LONG).show();
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 num2 = edit2.getText().toString();
                 try {
                     result = Double.parseDouble(num1) % Double.parseDouble(num2);
-                    textResult.setText("계산 결과 : " + result.toString());
+                    textResult.setText("계산 결과 : " + df.format(result).toString());
                 }
                 catch(NumberFormatException e){
                     Toast.makeText(getApplicationContext(),"숫자 입력란이 비어 있습니다.",Toast.LENGTH_LONG).show();
