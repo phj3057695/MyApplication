@@ -11,12 +11,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
     EditText edit1,edit2;
     Button btnAdd, btnSub, btnMul, btnDiv,btnMod;
     TextView textResult;
     String num1, num2;
     Double result;
+    DecimalFormat df = new DecimalFormat("0.####");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 num2 = edit2.getText().toString();
                 try {
                     result = Double.parseDouble(num1) * Double.parseDouble(num2);
+
                     textResult.setText("계산 결과 : " + result.toString());
                 }
                 catch(NumberFormatException e){
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     else {
                         result = Double.parseDouble(num1) / Double.parseDouble(num2);
-                        textResult.setText("계산 결과 : " + result.toString());
+                        textResult.setText("계산 결과 : " + df.format(result).toString());
                     }
                 }
                 catch(NumberFormatException e){
