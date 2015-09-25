@@ -15,11 +15,11 @@ import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
     EditText edit1,edit2;
-    Button btnAdd, btnSub, btnMul, btnDiv,btnMod;
-    TextView textResult;
-    String num1, num2;
+    Button btnAdd, btnSub, btnMul, btnDiv,btnMod, btnSetdec;
+    TextView textResult,textFormatString;
+    String num1, num2, format, fstring;
     Double result;
-    DecimalFormat df = new DecimalFormat("0.####");
+    DecimalFormat df = new DecimalFormat("0.");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +32,24 @@ public class MainActivity extends AppCompatActivity {
         btnMul = (Button)findViewById(R.id.BtnMul);
         btnDiv = (Button)findViewById(R.id.BtnDiv);
         btnMod = (Button)findViewById(R.id.BtnMod);
+        btnSetdec = (Button)findViewById(R.id.BtnSetDec);
         textResult=(TextView)findViewById(R.id.TextResult);
+        textFormatString=(TextView)findViewById(R.id.txtFormatString);
+        btnSetdec.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                fstring = "0.";
+                format = textFormatString.getText().toString();
+                try {
+                    for (int i = 0; i < Integer.parseInt(format); i++) {
+                        fstring = fstring + "#";
+                    }
+                    df.applyPattern(fstring);
+                    Toast.makeText(getApplicationContext(), "소숫점 "+format+"째 자리까지 나타냅니다.", Toast.LENGTH_LONG).show();
+                } catch (NumberFormatException e) {
+                    Toast.makeText(getApplicationContext(), "숫자 입력란이 비어 있습니다.", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
 
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override

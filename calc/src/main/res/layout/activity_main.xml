@@ -14,7 +14,7 @@
         android:layout_margin="10dp"
         android:hint="숫자1"/>
         <EditText
-            android:id="@+id/DecFormat"
+            android:id="@+id/txtFormatString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
