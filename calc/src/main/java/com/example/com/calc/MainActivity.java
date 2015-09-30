@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         btnSetdec = (Button)findViewById(R.id.BtnSetDec);
         textResult=(TextView)findViewById(R.id.TextResult);
         textFormatString=(TextView)findViewById(R.id.txtFormatString);
+
         btnSetdec.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 fstring = "0.";
@@ -44,7 +45,12 @@ public class MainActivity extends AppCompatActivity {
                         fstring = fstring + "#";
                     }
                     df.applyPattern(fstring);
-                    Toast.makeText(getApplicationContext(), "소숫점 "+format+"째 자리까지 나타냅니다.", Toast.LENGTH_LONG).show();
+                    if(Integer.parseInt(format) == 0){
+                        Toast.makeText(getApplicationContext(), "정수만 나타냅니다.", Toast.LENGTH_LONG).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(), "소숫점 " + format + "째 자리까지 나타냅니다.", Toast.LENGTH_LONG).show();
+                    }
                 } catch (NumberFormatException e) {
                     Toast.makeText(getApplicationContext(), "숫자 입력란이 비어 있습니다.", Toast.LENGTH_LONG).show();
                 }
