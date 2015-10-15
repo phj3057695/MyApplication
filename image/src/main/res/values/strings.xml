@@ -1,4 +1,12 @@
 <resources>
-    <string name="app_name">Image</string>
+    <string name="app_name">View the Android Version Pictures</string>
     <string name="action_settings">Settings</string>
+    <string name="start">Do you want to start?</string>
+    <string name="startswitch">Start</string>
+    <string name="androidver">What is your favorite Android Version?</string>
+    <string name="jellybean">JellyBean(4.3)</string>
+    <string name="kitkat">KitKat(4.4)</string>
+    <string name="lollipop">Lollipop(5.0)</string>
+    <string name="exit">Exit</string>
+    <string name="reset">Reset</string>
 </resources>

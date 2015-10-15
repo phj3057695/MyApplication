@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">cal2</string>
     <string name="action_settings">Settings</string>
+    <string name="TextAdd">ADD</string>
+    <string name="TextSub">SUBTRACT</string>
+    <string name="TextMul">MULTIPLY</string>
+    <string name="TextDiv">DIVIDE</string>
+    <string name="Edit1Hint">Enter the Integer 1</string>
+    <string name="Edit2Hint">Enter the Integer 2</string>
+    <string name="CalResult">Result :</string>
+    <string name="empty">You must select EditText first</string>
+    <string name="notnumber">Input Type is wrong</string>
+    <string name="cannotdiv0">Cannot be divided by 0</string>
+    <string name="title">Calculator (Using GridLayout)</string>
 </resources>

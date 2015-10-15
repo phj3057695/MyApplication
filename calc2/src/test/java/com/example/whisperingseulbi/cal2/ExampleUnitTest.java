@@ -1,4 +1,4 @@
-package com.example.whisperingseulbi.cal2;
+package com.example.whisperingseulbi.calc2;
 
 import org.junit.Test;
 
